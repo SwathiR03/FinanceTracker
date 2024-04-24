@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management</title>
+</head>
+<body>
+<h1>Budget Management</h1>
+
+<!-- Form to add a new budget -->
+<form action="#" th:action="@{/budget/add}" th:object="${newBudget}" method="post">
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" required><br>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" min="0" step="0.01" required><br>
+
+    <label for="timeframe">Timeframe:</label>
+    <input type="text" id="timeframe" name="timeframe" required><br>
+
+    <button type="submit">Add Budget</button>
+</form>
+
+<!-- Display existing budgets -->
+<h2>Existing Budgets:</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Timeframe</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="budget : ${budgets}">
+        <td th:text="${budget.category}"></td>
+        <td th:text="${budget.amount}"></td>
+        <td th:text="${budget.timeframe}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
