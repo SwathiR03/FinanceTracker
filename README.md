@@ -3,6 +3,8 @@
 # Members
 * Swathi Rao- PES2UG21CS565
 * V Rickvibhadhini - PES2UG21CS582
+* Vaibhavi Mahindrakar -PES2UG21CS587
+* Varsha Shree- PES2UG21CS592
 
 # How to Run?
 Prerequisites: Apache Maven, MongoDB, Spring Initializr. 
